@@ -1,0 +1,14 @@
+server:
+  port: 8001
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/ordersPurchase
+    username: postgres
+    password: 123456
+  jpa:
+    database: postgresql
+    show-sql: false
+    hibernate:
+      ddl-auto: update
