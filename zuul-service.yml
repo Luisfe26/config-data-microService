@@ -11,7 +11,7 @@ eureka:
 
 zuul:
   routes:
-    catalogo:
+    clientservice:
       path: /person/**
       sensitive-headers:
       service-id: client-service
