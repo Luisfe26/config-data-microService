@@ -25,4 +25,4 @@ zuul:
       path: /**
       sensitive-headers:
       service-id: order-sales-service
-      uri: lb://order-sales-service      
+      uri: lb://order-sales-service
