@@ -16,3 +16,13 @@ zuul:
       sensitive-headers:
       service-id: client-service
       uri: lb://client-service
+    purchaseservice:
+      path: /order/**
+      sensitive-headers:
+      service-id: order-purcharse-service
+      uri: lb://order-purcharse-service
+    salesservice:
+      path: /ordersales/**
+      sensitive-headers:
+      service-id: order-sales-service
+      uri: lb://order-sales-service
