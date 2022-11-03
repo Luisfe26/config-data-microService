@@ -11,16 +11,6 @@ eureka:
 
 zuul:
   routes:
-    clientservice:
-      path: /person/**
-      sensitive-headers:
-      service-id: client-service
-      uri: lb://client-service
-    orderpurchaseservice:
-      path: /orderspurchase/**
-      sensitive-headers:
-      service-id: order-purcharse-service
-      uri: lb://order-purcharse-service
     ordersalesservice:
       path: /orderssales/**
       sensitive-headers:
