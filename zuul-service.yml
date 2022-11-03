@@ -12,17 +12,17 @@ eureka:
 zuul:
   routes:
     clientservice:
-      path: /person/**
+      path: /**
       sensitive-headers:
       service-id: client-service
       uri: lb://client-service
     orderpurchaseservice:
-      path: /orderspurchase/**
+      path: /**
       sensitive-headers:
-      service-id: order-purcharse-service
-      uri: lb://order-purcharse-service
+      service-id: ordersPurchase-service
+      uri: lb://ordersPurchase-service
     ordersalesservice:
-      path: /orderssales/**
+      path: /**
       sensitive-headers:
       service-id: ordersSales-service
       uri: lb://ordersSales-service
