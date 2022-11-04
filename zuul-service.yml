@@ -15,17 +15,17 @@ zuul:
       path: /person/**
       sensitive-headers:
       service-id: client-service
-      #uri: lb://client-service
+      uri: lb://client-service
     orderpurchaseservice:
       path: /orderspurchase/**
       sensitive-headers:
       service-id: ordersPurchase-service
-      #uri: lb://ordersPurchase-service
+      uri: lb://ordersPurchase-service
     ordersalesservice:
       path: /orderssales/**
       sensitive-headers:
       service-id: ordersSales-service
-      #uri: lb://ordersSales-service
+      uri: lb://ordersSales-service
 
 ribbon:
    ReadTimeout: 60000
