@@ -14,8 +14,8 @@ zuul:
     clientservice:
       path: /person/**
       sensitive-headers:
-      serviceId: client-service
-      uri: lb://client-service
+      serviceId: CLIENT-SERVICE
+      uri: lb://CLIENT-SERVICE
     orderpurchaseservice:
       path: /orderspurchase/**
       sensitive-headers:
