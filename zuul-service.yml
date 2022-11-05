@@ -10,22 +10,26 @@ eureka:
     hostname: localhost
 
 zuul:
-  routes:
-    clientservice:
-      path: /person/**
-      sensitive-headers:
-      service-id: client-service
-      uri: lb://client-service
-    orderpurchaseservice:
-      path: /orderspurchase/**
-      sensitive-headers:
-      service-id: ordersPurchase-service
-      uri: lb://ordersPurchase-service
-    ordersalesservice:
-      path: /orderssales/**
-      sensitive-headers:
-      service-id: ordersSales-service
-      uri: lb://ordersSales-service
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+    routes:
+      clientservice:
+        path: /person/**
+        sensitive-headers:
+        service-id: client-service
+        uri: lb://client-service
+      orderpurchaseservice:
+        path: /orderspurchase/**
+        sensitive-headers:
+        service-id: ordersPurchase-service
+        uri: lb://ordersPurchase-service
+      ordersalesservice:
+        path: /orderssales/**
+        sensitive-headers:
+        service-id: ordersSales-service
+        uri: lb://ordersSales-service
 
 ribbon:
    ReadTimeout: 60000
