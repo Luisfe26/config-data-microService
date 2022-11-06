@@ -17,8 +17,10 @@ zuul:
       path: /person/**
       serviceId: client-service
       uri: lb://client-service
-      filters:
-        RemoveRequestHeader=Cookie
+      stripPrefix: true
+      sensitiveHeaders:
+      #filters:
+       # RemoveRequestHeader=Cookie
     orderpurchaseservice:
       path: /orderspurchase/**
       serviceId: ordersPurchase-service
