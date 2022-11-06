@@ -14,13 +14,20 @@ zuul:
   routes:
     clientservice:
       path: /person/**
+      sensitive-headers:
       serviceId: client-service
-      stripPrefix: true
+      uri: lb://client-service
+    orderpurchaseservice:
+      path: /orderspurchase/**
+      sensitive-headers:
+      serviceId: ordersPurchase-service
+      uri: lb://ordersPurchase-service
+    ordersalesservice:
+      path: /orderssales/**
+      sensitive-headers:
+      serviceId: ordersSales-service
+      uri: lb://ordersSales-service
 
-hystrix:
-  command:
-    client-service:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 30000
+ribbon:
+   ReadTimeout: 60000
+   connection-timeout: 3000
