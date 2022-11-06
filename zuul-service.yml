@@ -13,18 +13,18 @@ zuul:
   routes:
     clientservice:
       path: /person/**
-      serviceId: CLIENT-SERVICE
+      serviceId: client-service
       stripPrefix: true
 
 hystrix:
   command:
-    myusers-service:
+    client-service:
       execution:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
 
-myusers-service:
+client-service:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
     listOfServers: https://example1.com,http://example2.com
