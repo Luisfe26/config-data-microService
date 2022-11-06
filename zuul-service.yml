@@ -10,24 +10,25 @@ eureka:
     hostname: localhost
 
 zuul:
-  ignoredServices: '*'
   routes:
     clientservice:
       path: /person/**
-      sensitive-headers:
       serviceId: CLIENT-SERVICE
-      uri: lb://CLIENT-SERVICE
-    orderpurchaseservice:
-      path: /orderspurchase/**
-      sensitive-headers:
-      serviceId: ordersPurchase-service
-      uri: lb://ordersPurchase-service
-    ordersalesservice:
-      path: /orderssales/**
-      sensitive-headers:
-      serviceId: ordersSales-service
-      uri: lb://ordersSales-service
+      stripPrefix: true
 
-ribbon:
-   ReadTimeout: 60000
-   connection-timeout: 3000
+hystrix:
+  command:
+    myusers-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+
+myusers-service:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: https://example1.com,http://example2.com
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
