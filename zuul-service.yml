@@ -10,8 +10,8 @@ eureka:
     hostname: localhost
 
 zuul:
-  default-filters:
-    TokenRealy
+  #default-filters:
+    #TokenRealy
   routes:
     clientservice:
       path: /person/**
