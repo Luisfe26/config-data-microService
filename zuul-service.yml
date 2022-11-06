@@ -15,19 +15,16 @@ zuul:
   routes:
     clientservice:
       path: /person/**
-      sensitive-headers:
       serviceId: client-service
       uri: lb://client-service
       filters:
         RemoveRequestHeader=Cookie
     orderpurchaseservice:
       path: /orderspurchase/**
-      sensitive-headers:
       serviceId: ordersPurchase-service
       uri: lb://ordersPurchase-service
     ordersalesservice:
       path: /orderssales/**
-      sensitive-headers:
       serviceId: ordersSales-service
       uri: lb://ordersSales-service
 
