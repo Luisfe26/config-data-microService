@@ -17,7 +17,6 @@ zuul:
       sensitive-headers:
       serviceId: client-service
       uri: lb://client-service
-      url: forward:/
     orderpurchaseservice:
       path: /orderspurchase/**
       sensitive-headers:
