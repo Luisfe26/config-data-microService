@@ -23,3 +23,12 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 30000
+
+client-service:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    listOfServers: http://client-service
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
