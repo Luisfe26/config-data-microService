@@ -50,3 +50,5 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 50s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
+zuul:
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin

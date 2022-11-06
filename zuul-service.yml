@@ -10,7 +10,6 @@ eureka:
     hostname: localhost
 
 zuul:
-  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
   routes:
     clientservice:
       path: /person/**
