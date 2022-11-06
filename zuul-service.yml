@@ -21,10 +21,14 @@ zuul:
       path: /orderspurchase/**
       serviceId: ordersPurchase-service
       uri: lb://ordersPurchase-service
+      stripPrefix: false
+      sensitiveHeaders:
     ordersalesservice:
       path: /orderssales/**
       serviceId: ordersSales-service
       uri: lb://ordersSales-service
+      stripPrefix: false
+      sensitiveHeaders:
 
 ribbon:
    ReadTimeout: 60000
