@@ -33,6 +33,15 @@ zuul:
 ribbon:
    ReadTimeout: 60000
    connection-timeout: 3000
+
+Feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 #security:
 #  oauth2:
 #    resource:
