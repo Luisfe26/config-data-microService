@@ -33,7 +33,7 @@ zuul:
 ribbon:
    ReadTimeout: 60000
    connection-timeout: 3000
-security:
-  oauth2:
-    resource:
-      user-info-uri: http://localhost:8070/user
+#security:
+#  oauth2:
+#    resource:
+#      user-info-uri: http://localhost:8070/user
