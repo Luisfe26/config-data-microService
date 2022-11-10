@@ -60,5 +60,6 @@ management:
         include: "*"
   boot:
     admin:
-      client: http://localhost:8086
+      client: 
+        url: http://localhost:8086
         
