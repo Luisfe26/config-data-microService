@@ -30,7 +30,7 @@ zuul:
       stripPrefix: false
       sensitiveHeaders:
     securityservice:
-      path: /oauth/**
+      path: /**
       serviceId: security-service
       uri: lb://security-service
       stripPrefix: false
