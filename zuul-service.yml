@@ -51,4 +51,4 @@ management:
 security:
   oauth2:
     resource:
-      user-info-uri: http://security-service/user
+      user-info-uri: http://localhost:8070/user
