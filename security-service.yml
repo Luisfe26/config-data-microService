@@ -32,4 +32,4 @@ config:
         key: 123
       client:
         id: app
-        secret: elsecreto
+        secret: secret
